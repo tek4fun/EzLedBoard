@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2D23F2B1E8A4DFC00347E4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D23F2A1E8A4DFC00347E4D /* AppDelegate.swift */; };
+		E2D23F2D1E8A4DFC00347E4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D23F2C1E8A4DFC00347E4D /* ViewController.swift */; };
+		E2D23F301E8A4DFC00347E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D23F2E1E8A4DFC00347E4D /* Main.storyboard */; };
+		E2D23F321E8A4DFC00347E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D23F311E8A4DFC00347E4D /* Assets.xcassets */; };
+		E2D23F351E8A4DFC00347E4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D23F331E8A4DFC00347E4D /* LaunchScreen.storyboard */; };
+		E2D23F401E8A4DFC00347E4D /* EzLedBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D23F3F1E8A4DFC00347E4D /* EzLedBoardTests.swift */; };
+		E2D23F4B1E8A4DFC00347E4D /* EzLedBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D23F4A1E8A4DFC00347E4D /* EzLedBoardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2D23F3C1E8A4DFC00347E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D23F1F1E8A4DFC00347E4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2D23F261E8A4DFC00347E4D;
+			remoteInfo = EzLedBoard;
+		};
+		E2D23F471E8A4DFC00347E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D23F1F1E8A4DFC00347E4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2D23F261E8A4DFC00347E4D;
+			remoteInfo = EzLedBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2D23F271E8A4DFC00347E4D /* EzLedBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzLedBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D23F2A1E8A4DFC00347E4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2D23F2C1E8A4DFC00347E4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2D23F2F1E8A4DFC00347E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2D23F311E8A4DFC00347E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2D23F341E8A4DFC00347E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2D23F361E8A4DFC00347E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D23F3B1E8A4DFC00347E4D /* EzLedBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzLedBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D23F3F1E8A4DFC00347E4D /* EzLedBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzLedBoardTests.swift; sourceTree = "<group>"; };
+		E2D23F411E8A4DFC00347E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D23F461E8A4DFC00347E4D /* EzLedBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzLedBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D23F4A1E8A4DFC00347E4D /* EzLedBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzLedBoardUITests.swift; sourceTree = "<group>"; };
+		E2D23F4C1E8A4DFC00347E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2D23F241E8A4DFC00347E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F381E8A4DFC00347E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F431E8A4DFC00347E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2D23F1E1E8A4DFC00347E4D = {
+			isa = PBXGroup;
+			children = (
+				E2D23F291E8A4DFC00347E4D /* EzLedBoard */,
+				E2D23F3E1E8A4DFC00347E4D /* EzLedBoardTests */,
+				E2D23F491E8A4DFC00347E4D /* EzLedBoardUITests */,
+				E2D23F281E8A4DFC00347E4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2D23F281E8A4DFC00347E4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D23F271E8A4DFC00347E4D /* EzLedBoard.app */,
+				E2D23F3B1E8A4DFC00347E4D /* EzLedBoardTests.xctest */,
+				E2D23F461E8A4DFC00347E4D /* EzLedBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2D23F291E8A4DFC00347E4D /* EzLedBoard */ = {
+			isa = PBXGroup;
+			children = (
+				E2D23F2A1E8A4DFC00347E4D /* AppDelegate.swift */,
+				E2D23F2C1E8A4DFC00347E4D /* ViewController.swift */,
+				E2D23F2E1E8A4DFC00347E4D /* Main.storyboard */,
+				E2D23F311E8A4DFC00347E4D /* Assets.xcassets */,
+				E2D23F331E8A4DFC00347E4D /* LaunchScreen.storyboard */,
+				E2D23F361E8A4DFC00347E4D /* Info.plist */,
+			);
+			path = EzLedBoard;
+			sourceTree = "<group>";
+		};
+		E2D23F3E1E8A4DFC00347E4D /* EzLedBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2D23F3F1E8A4DFC00347E4D /* EzLedBoardTests.swift */,
+				E2D23F411E8A4DFC00347E4D /* Info.plist */,
+			);
+			path = EzLedBoardTests;
+			sourceTree = "<group>";
+		};
+		E2D23F491E8A4DFC00347E4D /* EzLedBoardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2D23F4A1E8A4DFC00347E4D /* EzLedBoardUITests.swift */,
+				E2D23F4C1E8A4DFC00347E4D /* Info.plist */,
+			);
+			path = EzLedBoardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2D23F261E8A4DFC00347E4D /* EzLedBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D23F4F1E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoard" */;
+			buildPhases = (
+				E2D23F231E8A4DFC00347E4D /* Sources */,
+				E2D23F241E8A4DFC00347E4D /* Frameworks */,
+				E2D23F251E8A4DFC00347E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EzLedBoard;
+			productName = EzLedBoard;
+			productReference = E2D23F271E8A4DFC00347E4D /* EzLedBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2D23F3A1E8A4DFC00347E4D /* EzLedBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D23F521E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardTests" */;
+			buildPhases = (
+				E2D23F371E8A4DFC00347E4D /* Sources */,
+				E2D23F381E8A4DFC00347E4D /* Frameworks */,
+				E2D23F391E8A4DFC00347E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D23F3D1E8A4DFC00347E4D /* PBXTargetDependency */,
+			);
+			name = EzLedBoardTests;
+			productName = EzLedBoardTests;
+			productReference = E2D23F3B1E8A4DFC00347E4D /* EzLedBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2D23F451E8A4DFC00347E4D /* EzLedBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D23F551E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardUITests" */;
+			buildPhases = (
+				E2D23F421E8A4DFC00347E4D /* Sources */,
+				E2D23F431E8A4DFC00347E4D /* Frameworks */,
+				E2D23F441E8A4DFC00347E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D23F481E8A4DFC00347E4D /* PBXTargetDependency */,
+			);
+			name = EzLedBoardUITests;
+			productName = EzLedBoardUITests;
+			productReference = E2D23F461E8A4DFC00347E4D /* EzLedBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2D23F1F1E8A4DFC00347E4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = techmaster;
+				TargetAttributes = {
+					E2D23F261E8A4DFC00347E4D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					E2D23F3A1E8A4DFC00347E4D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2D23F261E8A4DFC00347E4D;
+					};
+					E2D23F451E8A4DFC00347E4D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2D23F261E8A4DFC00347E4D;
+					};
+				};
+			};
+			buildConfigurationList = E2D23F221E8A4DFC00347E4D /* Build configuration list for PBXProject "EzLedBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2D23F1E1E8A4DFC00347E4D;
+			productRefGroup = E2D23F281E8A4DFC00347E4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2D23F261E8A4DFC00347E4D /* EzLedBoard */,
+				E2D23F3A1E8A4DFC00347E4D /* EzLedBoardTests */,
+				E2D23F451E8A4DFC00347E4D /* EzLedBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2D23F251E8A4DFC00347E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D23F351E8A4DFC00347E4D /* LaunchScreen.storyboard in Resources */,
+				E2D23F321E8A4DFC00347E4D /* Assets.xcassets in Resources */,
+				E2D23F301E8A4DFC00347E4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F391E8A4DFC00347E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F441E8A4DFC00347E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2D23F231E8A4DFC00347E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D23F2D1E8A4DFC00347E4D /* ViewController.swift in Sources */,
+				E2D23F2B1E8A4DFC00347E4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F371E8A4DFC00347E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D23F401E8A4DFC00347E4D /* EzLedBoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D23F421E8A4DFC00347E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D23F4B1E8A4DFC00347E4D /* EzLedBoardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2D23F3D1E8A4DFC00347E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2D23F261E8A4DFC00347E4D /* EzLedBoard */;
+			targetProxy = E2D23F3C1E8A4DFC00347E4D /* PBXContainerItemProxy */;
+		};
+		E2D23F481E8A4DFC00347E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2D23F261E8A4DFC00347E4D /* EzLedBoard */;
+			targetProxy = E2D23F471E8A4DFC00347E4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2D23F2E1E8A4DFC00347E4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D23F2F1E8A4DFC00347E4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2D23F331E8A4DFC00347E4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D23F341E8A4DFC00347E4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2D23F4D1E8A4DFC00347E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2D23F4E1E8A4DFC00347E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2D23F501E8A4DFC00347E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EzLedBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E2D23F511E8A4DFC00347E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EzLedBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E2D23F531E8A4DFC00347E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EzLedBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzLedBoard.app/EzLedBoard";
+			};
+			name = Debug;
+		};
+		E2D23F541E8A4DFC00347E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EzLedBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzLedBoard.app/EzLedBoard";
+			};
+			name = Release;
+		};
+		E2D23F561E8A4DFC00347E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EzLedBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EzLedBoard;
+			};
+			name = Debug;
+		};
+		E2D23F571E8A4DFC00347E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EzLedBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzLedBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EzLedBoard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2D23F221E8A4DFC00347E4D /* Build configuration list for PBXProject "EzLedBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D23F4D1E8A4DFC00347E4D /* Debug */,
+				E2D23F4E1E8A4DFC00347E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D23F4F1E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D23F501E8A4DFC00347E4D /* Debug */,
+				E2D23F511E8A4DFC00347E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2D23F521E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D23F531E8A4DFC00347E4D /* Debug */,
+				E2D23F541E8A4DFC00347E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2D23F551E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D23F561E8A4DFC00347E4D /* Debug */,
+				E2D23F571E8A4DFC00347E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2D23F1F1E8A4DFC00347E4D /* Project object */;
+}
