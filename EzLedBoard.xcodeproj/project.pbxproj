@@ -509,6 +509,7 @@
 				E2D23F511E8A4DFC00347E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2D23F521E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +518,7 @@
 				E2D23F541E8A4DFC00347E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2D23F551E8A4DFC00347E4D /* Build configuration list for PBXNativeTarget "EzLedBoardUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +527,7 @@
 				E2D23F571E8A4DFC00347E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
