@@ -29,7 +29,7 @@ class ViewController: UIViewController {
              [0,1,1,0,0]]
     let D = [[1,1,1,0,0],
              [1,0,0,1,0],
-             [1,0,0,1,0], 
+             [1,0,0,1,0],
              [1,0,0,1,0],
              [1,0,0,1,0],
              [1,1,1,0,0]]
@@ -240,7 +240,7 @@ class ViewController: UIViewController {
     var rect = UIView()
     var count = Int()
     var move = Timer()
-    
+    var color = UIColor.green
     override func viewDidLoad() {
         super.viewDidLoad()
         diction = ["A":A,"B":B,"C":C,"D":D,"E":E,"F":F,"G":G,"H":H,"I":I,"J":J,"K":K,"L":L,"M":M,"N":N,"O":O,"P":P,"Q":Q,"R":R,"S":S,"T":T,"U":U,"V":V,"W":W,"X":X,"Y":Y,"Z":Z,"0":zero,"1":one,"2":two,"3":three,"4":four,"5":five,"6":six,"7":seven,"8":eight,"9":nine," ":Space]
@@ -265,7 +265,7 @@ class ViewController: UIViewController {
     @IBAction func act_Draw(_ sender: Any) {
         move.invalidate()
         for view in view.subviews{
-            if view.tag != 100 && view.tag != 101{
+            if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104{
                 view.removeFromSuperview()
             }
             
@@ -280,6 +280,11 @@ class ViewController: UIViewController {
         move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(printthis), userInfo: nil, repeats: true)
     }
     //In Chu
+    
+    @IBAction func act_changeColor(_ sender: UIButton) {
+        color = sender.backgroundColor!
+    }
+    
     func printthis() {
         for rect in ledArr{
             for i in rect{
@@ -290,7 +295,7 @@ class ViewController: UIViewController {
             for iCol in (0...charCount-1).reversed(){
                 let led = self.ledArr[iCol+count][iRow]
                 if self.temp[iRow][iCol] == 1{
-                    led.backgroundColor = UIColor.green
+                    led.backgroundColor = color
                 }else if self.temp[iRow][iCol] == 0 {
                     led.backgroundColor = UIColor.gray
                 }
