@@ -60,10 +60,28 @@
                                     <action selector="act_changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SmV-c2-70h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8q-5e-UpX">
+                                <rect key="frame" x="492" y="21" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="act_MoveLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="on2-QB-GiO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VZ-rU-w5o">
+                                <rect key="frame" x="554" y="20" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="act_MoveRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3X-pG-hw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btn_MoveLeft" destination="J8q-5e-UpX" id="u7d-Uk-8FF"/>
+                        <outlet property="btn_MoveRight" destination="7VZ-rU-w5o" id="jPK-K7-2LQ"/>
                         <outlet property="txt_Input" destination="tV8-O2-Vir" id="36g-cH-wFT"/>
                     </connections>
                 </viewController>

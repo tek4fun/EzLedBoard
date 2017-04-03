@@ -62,12 +62,12 @@ class ViewController: UIViewController {
              [1,1,1,1,0],
              [1,0,0,1,0],
              [1,0,0,1,0]]
-    let I = [[1,1,1,1,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [1,1,1,1,0]]
+    let I = [[1,1,1,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [1,1,1,0,0]]
     let J = [[1,1,1,1,0],
              [0,0,0,1,0],
              [0,0,0,1,0],
@@ -128,12 +128,12 @@ class ViewController: UIViewController {
              [0,0,0,1,0],
              [0,0,0,1,0],
              [1,1,1,1,0]]
-    let T = [[1,1,1,1,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0],
-             [0,1,1,0,0]]
+    let T = [[1,1,1,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0],
+             [0,1,0,0,0]]
     let U = [[1,0,0,1,0],
              [1,0,0,1,0],
              [1,0,0,1,0],
@@ -236,7 +236,28 @@ class ViewController: UIViewController {
                  [0,0,0,0,0],
                  [0,0,0,0,0],
                  [0,0,0,0,0]]
+    let exclamation = [[0,1,0,0,0],
+                       [0,1,0,0,0],
+                       [0,1,0,0,0],
+                       [0,1,0,0,0],
+                       [0,0,0,0,0],
+                       [0,1,0,0,0]]
+    let question = [[0,1,1,0,0],
+                    [1,0,0,1,0],
+                    [0,0,1,0,0],
+                    [0,1,0,0,0],
+                    [0,0,0,0,0],
+                    [0,1,0,0,0]]
+    let has = [[0,1,0,1,0],
+               [1,1,1,1,1],
+               [0,1,0,1,0],
+               [1,1,1,1,1],
+               [0,1,0,1,0],
+               [0,1,0,1,0]]
+    
     @IBOutlet weak var txt_Input: UITextField!
+    @IBOutlet weak var btn_MoveLeft: UIButton!
+    @IBOutlet weak var btn_MoveRight: UIButton!
     
     var diction:[Character:[[Int]]] = [:]
     var temp = [[Int]]()
@@ -248,8 +269,10 @@ class ViewController: UIViewController {
     var move = Timer()
     var color = UIColor.green
     override func viewDidLoad() {
+        btn_MoveLeft.isHidden = true
+        btn_MoveRight.isHidden = true
         super.viewDidLoad()
-        diction = ["A":A,"B":B,"C":C,"D":D,"E":E,"F":F,"G":G,"H":H,"I":I,"J":J,"K":K,"L":L,"M":M,"N":N,"O":O,"P":P,"Q":Q,"R":R,"S":S,"T":T,"U":U,"V":V,"W":W,"X":X,"Y":Y,"Z":Z,"0":zero,"1":one,"2":two,"3":three,"4":four,"5":five,"6":six,"7":seven,"8":eight,"9":nine," ":Space]
+        diction = ["A":A,"B":B,"C":C,"D":D,"E":E,"F":F,"G":G,"H":H,"I":I,"J":J,"K":K,"L":L,"M":M,"N":N,"O":O,"P":P,"Q":Q,"R":R,"S":S,"T":T,"U":U,"V":V,"W":W,"X":X,"Y":Y,"Z":Z,"0":zero,"1":one,"2":two,"3":three,"4":four,"5":five,"6":six,"7":seven,"8":eight,"9":nine," ":Space,"?":question,"!":exclamation,"#":has]
     }
     
     //Cong cac mang
@@ -271,18 +294,20 @@ class ViewController: UIViewController {
     @IBAction func act_DrawToScreen(_ sender: Any) {
         move.invalidate()
         for view in view.subviews{
-            if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104{
+            if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104 && view.tag != 105 && view.tag != 106{
                 view.removeFromSuperview()
             }
         }
+        
         let inputText:String = (txt_Input.text?.uppercased())!
         let characters = inputText.characters
         combineChar(characters)
         arrayWidth = characters.count * 5
-        
         ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:6),count: arrayWidth * 2 + tableWidth)
         drawTable(arrayWidth: arrayWidth)
         count = arrayWidth + tableWidth
+        btn_MoveLeft.isHidden = false
+        btn_MoveRight.isHidden = false
         move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(drawChactarter), userInfo: nil, repeats: true)
     }
     
@@ -301,7 +326,8 @@ class ViewController: UIViewController {
                 let led = self.ledArr[iCol+count][iRow]
                 if self.temp[iRow][iCol] == 1{
                     led.backgroundColor = color
-                }else if self.temp[iRow][iCol] == 0 {
+                }
+                else if self.temp[iRow][iCol] == 0 {
                     led.backgroundColor = UIColor.gray
                 }
             }
@@ -309,6 +335,47 @@ class ViewController: UIViewController {
         count -= 1
         if count == 0{
             count = arrayWidth + tableWidth
+        }
+    }
+    
+    @IBAction func act_MoveLeft(_ sender: Any) {
+        move.invalidate()
+        if count == 0 {
+            count += 1
+        }
+        move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(drawChactarter), userInfo: nil, repeats: true)
+
+    }
+    
+    @IBAction func act_MoveRight(_ sender: Any) {
+        move.invalidate()
+        if count == arrayWidth + tableWidth {
+            count -= 1
+        }
+        move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(drawChactarterRight), userInfo: nil, repeats: true)
+    }
+    
+    
+    func drawChactarterRight() {
+        for rect in ledArr{
+            for i in rect{
+                i.backgroundColor = UIColor.gray
+            }
+        }
+        for iRow in (0...5){
+            for iCol in (0...arrayWidth-1){
+                let led = self.ledArr[iCol+count][iRow]
+                if self.temp[iRow][iCol] == 1{
+                    led.backgroundColor = color
+                }
+                else if self.temp[iRow][iCol] == 0 {
+                    led.backgroundColor = UIColor.gray
+                }
+            }
+        }
+        count += 1
+        if count == arrayWidth + tableWidth{
+            count = 0
         }
     }
     
