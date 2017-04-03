@@ -15,13 +15,6 @@ class ViewController: UIViewController {
              [1,1,1,1,0],
              [1,0,0,1,0],
              [1,0,0,1,0]]
-    let B = [[1,1,1,0,0],
-             [1,0,0,1,0],
-             [1,1,1,0,0],
-             [1,0,0,1,0],
-             [1,0,0,1,0],
-             [1,1,1,0,0]]
-    
     let H = [[1,0,0,1,0],
              [1,0,0,1,0],
              [1,1,1,1,0],
@@ -43,15 +36,13 @@ class ViewController: UIViewController {
     
     var temp = [[Int]]()
     var ledArr = [[UIView]]()
-    //var tag = 100
     var rect = UIView()
     var count = 38
     var move = Timer()
-    var currentTemp = [[UIView]]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:100),count:100)
+        ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:6),count:63)
         
         temp = [[Int]](repeating:[Int](repeating:0,count:25),count:6)
         
@@ -67,10 +58,9 @@ class ViewController: UIViewController {
         print(temp)
         draw()
         move = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(printthis), userInfo: nil, repeats: true)
-        
     }
     
-    func printthis(/*chracter:[[Int]]*/) {
+    func printthis() {
         for rect in ledArr{
             for i in rect{
                 i.backgroundColor = UIColor.gray
@@ -84,21 +74,13 @@ class ViewController: UIViewController {
                 }else if self.temp[iRow][iCol] == 0 {
                     led.backgroundColor = UIColor.gray
                 }
-                
             }
         }
-        
-        //currentTemp = ledArr
-        
         count -= 1
         if count == 0{
             count = 38
         }
-        
-        
     }
-    
-    
     
     func draw(){
         let cellWidth = self.view.bounds.height/8
