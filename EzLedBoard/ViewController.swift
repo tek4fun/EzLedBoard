@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     let H = [[1,0,0,1,0],
              [1,0,0,1,0],
              [1,1,1,1,0],
-             [1,1,1,1,0],
+             [1,0,0,1,0],
              [1,0,0,1,0],
              [1,0,0,1,0]]
     let I = [[1,1,1,0,0],
@@ -258,6 +258,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txt_Input: UITextField!
     @IBOutlet weak var btn_MoveLeft: UIButton!
     @IBOutlet weak var btn_MoveRight: UIButton!
+    @IBOutlet weak var btn_Stop: UIButton!
+
     
     var diction:[Character:[[Int]]] = [:]
     var temp = [[Int]]()
@@ -271,6 +273,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         btn_MoveLeft.isHidden = true
         btn_MoveRight.isHidden = true
+        btn_Stop.isHidden = true
         super.viewDidLoad()
         diction = ["A":A,"B":B,"C":C,"D":D,"E":E,"F":F,"G":G,"H":H,"I":I,"J":J,"K":K,"L":L,"M":M,"N":N,"O":O,"P":P,"Q":Q,"R":R,"S":S,"T":T,"U":U,"V":V,"W":W,"X":X,"Y":Y,"Z":Z,"0":zero,"1":one,"2":two,"3":three,"4":four,"5":five,"6":six,"7":seven,"8":eight,"9":nine," ":Space,"?":question,"!":exclamation,"#":has]
     }
@@ -294,7 +297,7 @@ class ViewController: UIViewController {
     @IBAction func act_DrawToScreen(_ sender: Any) {
         move.invalidate()
         for view in view.subviews{
-            if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104 && view.tag != 105 && view.tag != 106{
+            if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104 && view.tag != 105 && view.tag != 106 && view.tag != 107{
                 view.removeFromSuperview()
             }
         }
@@ -308,9 +311,10 @@ class ViewController: UIViewController {
         count = arrayWidth + tableWidth
         btn_MoveLeft.isHidden = false
         btn_MoveRight.isHidden = false
+        btn_Stop.isHidden = false
         move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(drawChactarter), userInfo: nil, repeats: true)
     }
-    
+    //Doi mau
     @IBAction func act_changeColor(_ sender: UIButton) {
         color = sender.backgroundColor!
     }
@@ -337,7 +341,9 @@ class ViewController: UIViewController {
             count = arrayWidth + tableWidth
         }
     }
-    
+    @IBAction func act_Stop(_ sender: Any) {
+        move.invalidate()
+    }
     @IBAction func act_MoveLeft(_ sender: Any) {
         move.invalidate()
         if count == 0 {
