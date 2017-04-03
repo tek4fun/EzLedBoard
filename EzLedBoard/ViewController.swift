@@ -4,7 +4,12 @@
 //
 //  Created by techmaster on 3/28/17.
 //  Copyright © 2017 techmaster. All rights reserved.
-//
+/*
+ - Xác nhận các Kí Tự Nhập Vào để tạo mảng chữ tương ứng
+ - Chuyển màu toàn bộ table thành Grey
+ - Đổi các ô thành màu khác (mặc định: xanh) tương ứng với mảng chuyền vào
+ - Kết thúc chu kì.
+ */
 
 import UIKit
 
@@ -235,10 +240,11 @@ class ViewController: UIViewController {
     
     var diction:[Character:[[Int]]] = [:]
     var temp = [[Int]]()
-    var charCount = Int()
+    var arrayWidth = Int()
     var ledArr = [[UIView]]()
     var rect = UIView()
     var count = Int()
+    var tableWidth = 13
     var move = Timer()
     var color = UIColor.green
     override func viewDidLoad() {
@@ -262,37 +268,36 @@ class ViewController: UIViewController {
         }
     }
     // Button In Chu
-    @IBAction func act_Draw(_ sender: Any) {
+    @IBAction func act_DrawToScreen(_ sender: Any) {
         move.invalidate()
         for view in view.subviews{
             if view.tag != 100 && view.tag != 101 && view.tag != 102 && view.tag != 103 && view.tag != 104{
                 view.removeFromSuperview()
             }
-            
         }
         let inputText:String = (txt_Input.text?.uppercased())!
         let characters = inputText.characters
         combineChar(characters)
-        charCount = characters.count * 5
-        ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:6),count: charCount * 2 + 13)
-        draw(charCount: charCount)
-        count = charCount + 13
-        move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(printthis), userInfo: nil, repeats: true)
+        arrayWidth = characters.count * 5
+        
+        ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:6),count: arrayWidth * 2 + tableWidth)
+        drawTable(arrayWidth: arrayWidth)
+        count = arrayWidth + tableWidth
+        move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(drawChactarter), userInfo: nil, repeats: true)
     }
-    //In Chu
     
     @IBAction func act_changeColor(_ sender: UIButton) {
         color = sender.backgroundColor!
     }
-    
-    func printthis() {
+    //In Chu
+    func drawChactarter() {
         for rect in ledArr{
             for i in rect{
                 i.backgroundColor = UIColor.gray
             }
         }
         for iRow in (0...5).reversed(){
-            for iCol in (0...charCount-1).reversed(){
+            for iCol in (0...arrayWidth-1).reversed(){
                 let led = self.ledArr[iCol+count][iRow]
                 if self.temp[iRow][iCol] == 1{
                     led.backgroundColor = color
@@ -303,11 +308,12 @@ class ViewController: UIViewController {
         }
         count -= 1
         if count == 0{
-            count = charCount + 13
+            count = arrayWidth + tableWidth
         }
     }
+    
     // Ve bang
-    func draw(charCount:Int){
+    func drawTable(arrayWidth:Int){
         let cellWidth = self.view.bounds.height/8
         UIView.animate(withDuration: 0.5) {
             for row in 0...12{
@@ -316,7 +322,7 @@ class ViewController: UIViewController {
                     self.rect.backgroundColor = UIColor.gray
                     self.rect.center = CGPoint(x: cellWidth*CGFloat(row) + 50, y: cellWidth*CGFloat(col) + 90)
                     //self.rect.tag = col * 1000 + row
-                    self.ledArr[charCount+row][col] = self.rect
+                    self.ledArr[arrayWidth+row][col] = self.rect
                     self.view.addSubview(self.rect)
                 }
             }

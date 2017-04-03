@@ -33,7 +33,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Draw"/>
                                 <connections>
-                                    <action selector="act_Draw:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6t-fO-6xD"/>
+                                    <action selector="act_DrawToScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5LT-SH-jv0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-km-wFu">
