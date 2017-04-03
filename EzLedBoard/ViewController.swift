@@ -171,35 +171,22 @@ class ViewController: UIViewController {
                  [0,0,0,0,0],
                  [0,0,0,0,0],
                  [0,0,0,0,0]]
-    var diction:[Character:[[Int]]] = [:]
     @IBOutlet weak var txt_Input: UITextField!
+
+    var diction:[Character:[[Int]]] = [:]
     var temp = [[Int]]()
     var charCount = Int()
     var ledArr = [[UIView]]()
     var rect = UIView()
     var count = Int()
     var move = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //ledArr = [[UIView]](repeating:[UIView](repeating:rect,count:6),count:63)
-        
-        //        temp = [[Int]](repeating:[Int](repeating:0,count:25),count:6)
         diction = ["A":A,"B":B,"C":C,"D":D,"E":E,"F":F,"G":G,"H":H,"I":I,"J":J,"K":K,"L":L,"M":M,"N":N,"O":O,"P":P,"Q":Q,"R":R,"S":S,"T":T,"U":U,"V":V,"W":W,"X":X,"Y":Y,"Z":Z," ":Space]
-        //        for row in 0...5{
-        //            for col in 0...4{
-        //                temp[row][col] = H[row][col]
-        //                temp[row][col+5] = A[row][col]
-        //                temp[row][col+10] = P[row][col]
-        //                temp[row][col+15] = P[row][col]
-        //                temp[row][col+20] = Y[row][col]
-        //            }
-        //        }
-        //      print(temp)
-        //draw()
-        //move = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(printthis), userInfo: nil, repeats: true)
     }
     
+    //Cong cac mang
     func combineChar(_ characters: String.CharacterView){
         let total = characters.count
         temp = [[Int]](repeating:[Int](repeating:0,count: total * 5),count:6)
@@ -214,10 +201,7 @@ class ViewController: UIViewController {
             icount += 5
         }
     }
-    
-    
-    
-    
+    // Button In Chu
     @IBAction func act_Draw(_ sender: Any) {
         move.invalidate()
         for view in view.subviews{
@@ -235,7 +219,7 @@ class ViewController: UIViewController {
         count = charCount + 13
         move = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(printthis), userInfo: nil, repeats: true)
     }
-    
+    //In Chu
     func printthis() {
         for rect in ledArr{
             for i in rect{
@@ -257,7 +241,7 @@ class ViewController: UIViewController {
             count = charCount + 13
         }
     }
-    
+    // Ve bang
     func draw(charCount:Int){
         let cellWidth = self.view.bounds.height/8
         UIView.animate(withDuration: 0.5) {
